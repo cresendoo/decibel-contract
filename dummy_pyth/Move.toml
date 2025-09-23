@@ -1,0 +1,21 @@
+# this is locally copied from https://github.com/pyth-network/pyth-crosschain/tree/main/target_chains/aptos for test setup purposes alone
+# on production networks, Pyth will be used directly.
+
+
+[package]
+name = "dummy_pyth"
+version = "1.0.0"
+authors = []
+
+[addresses]
+decibel_dex = "_"
+
+[dev-addresses]
+decibel_dex = "0x4e110"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+# follow fixed order book from aptos-core version that we depend on,
+# and update together with appropriate changes to new version.
+rev = "0a6483c3ed1a293e6a5064d8b6a467a8d7da9e4f"
+subdir = "aptos-move/framework/aptos-framework"
